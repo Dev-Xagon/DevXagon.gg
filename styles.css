@@ -1,6 +1,8 @@
 body {
     background: rgb(242,176,92);
     background: radial-gradient(circle, rgba(242,176,92,1) 0%, rgba(79,219,208,1) 100%);
+    margin-left:auto;
+    margin-Right:auto;
 }
 h1 {
     color: red;
