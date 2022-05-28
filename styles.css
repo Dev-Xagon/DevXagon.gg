@@ -6,9 +6,9 @@ body {
     text-align: center;
 }
 h1 {
-    color: red;
+    color: rgb(12, 53, 2);
     width: 60%;
-    border: 10px solid rgb(61, 201, 61);
+    border: 10px solid rgb(153, 96, 11);
     padding: 50px;
     margin: 20px;
     margin-left: auto;
