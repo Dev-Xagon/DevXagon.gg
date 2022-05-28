@@ -34,7 +34,7 @@
       Set up the movement speed of the Tank using Fvector and the Delta Time component<br>
     </li>
     <li> 
-      Adjusted the collision sweeping of my Tank(CapsuleSqhere as Root Component) so it was blocked by other world objects.<br>
+      Adjusted the collision sweeping of my Tank(CapsuleSphere as Root Component) so it was blocked by other world objects.<br>
        Took me a little while to figure out why I couldn't move after implementing collision. But then it occured to me:<br> The capsule was overlapping with the ground mesh, so it was blocked from the beginning. <br>
     </li>
     <li>
@@ -44,6 +44,11 @@
     <li>
       The next step will make the mouse Movement (Controller Input) rotate the turret of the tank pawn. I got introduced to the Cast function. Very confusing since the explanation used the word pointer like 20 times. <br>
       I'm still not sure, what pointers actually do. Should get this straight at some point in the near future. <br>
+    </li>
+    <li>
+      Next up is creating hit results/ casting. So first I got the system to draw a debug sphere into the world/ onto my tank. <br>
+      <img src= "Debugsphere.png" alt="pngofdebugsphere" width="40%" ></a> <br>
+      The next task was to create a Debugsphere at the position of the cursor, which was created by the funktion GetHitResultUnderCursor() with a reference to a pointer(?!) to the PlayerController.
     </li>
 
 
