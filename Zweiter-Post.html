@@ -29,12 +29,24 @@
   <p>Today you'll get my first real update on how my coding in C++ is improving. Since I already use some basic css to get the looks of the blog to some "higher standard", you'll get to see most of the visual upgrades for every blogpost, past and present.</p>
 
   <h2>Project Toon Tanks</h2>
-  <p> So today I accomplished the following in the tutorial I told you about:</p>
-  <ul>
-      <li>
-          <!-- insert accomplishments inside this (unordered) list and get some formatting done in the css file as well!-->
-      </li>
-  </ul>
+  <ul>So today I accomplished the following in the tutorial I told you about:</ul>
+    <li>
+      Set up the movement speed of the Tank using Fvector and the Delta Time component<br>
+    </li>
+    <li> 
+      Adjusted the collision sweeping of my Tank(CapsuleSqhere as Root Component) so it was blocked by other world objects.<br>
+       Took me a little while to figure out why I couldn't move after implementing collision. But then it occured to me:<br> The capsule was overlapping with the ground mesh, so it was blocked from the beginning. <br>
+    </li>
+    <li>
+      After I fixed that, Rotation was to be implemented. Adding FRotator and adding a rotation function for the turn rate using UGameplayStatics.<br>
+      (Question if anyone reads this: Why am I not able to get the definition of FRotator? I just get the definition of TRotator. Help please!)<br>
+    </li>
+    <li>
+      The next step will make the mouse Movement (Controller Input) rotate the turret of the tank pawn. I got introduced to the Cast function. Very confusing since the explanation used the word pointer like 20 times. <br>
+      I'm still not sure, what pointers actually do. Should get this straight at some point in the near future. <br>
+    </li>
+
+
   <script src="js/scripts.js"></script>
 </body>
 </html>
