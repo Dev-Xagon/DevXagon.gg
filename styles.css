@@ -60,3 +60,9 @@ a:hover{
     color:green;
     font-size: larger;
 }
+a:active{
+    color: rgb(132, 247, 132);
+}
+a:visited{
+    color:chocolate;
+}
