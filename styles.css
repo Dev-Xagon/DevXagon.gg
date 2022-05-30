@@ -5,17 +5,9 @@ body {
     margin-Right:auto;
     text-align:center;
 }
-h1 {
-    color: rgb(12, 53, 2);
-    width: 60%;
-    border: 10px solid rgb(153, 96, 11);
-    padding: 50px;
-    margin: 20px;
-    margin-left: auto;
-    margin-right:auto;
+h1 { color: rgb(0, 146, 24); font-family: 'Helvetica Neue', sans-serif; font-size: 175px; font-weight: bold; letter-spacing: -1px; line-height: 1; text-align: center; }
 
 
-}
 .center {
     display: block;
     margin-left: auto;
