@@ -1,0 +1,50 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="styles.css" rel="stylesheet" type="text/css">
+
+  <title>Today is Python Day!</title>
+  <meta name="description" content="This will be the basic template for future Blogposts">
+  <meta name="author" content="SitePoint">
+
+  <meta property="og:title" content="Basic Template for my Blog">
+  <meta property="og:type" content="DevbLog">
+  <meta property="og:url" content="https://www.sitepoint.com/a-basic-html5-template/">
+  <meta property="og:description" content="Template for my blogposts in the future">
+  <meta property="og:image" content="image.png">
+
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+</head>
+
+<body>
+  <h1> Today is Python Day!</h1>
+
+  <p class="introduction">So today I remembered that for machine learning, which I would need for legal tech at some point I guess, python is a good language to start with. There is also a new script for HTML called pyscript. So maybe I don't have to use Javascript at all for my Webpage. That would make things a lot more comfortable! </p>
+  <div>
+    <p>So I started to get on with a course for basic python programming by "Sololearn" which is providing some information that gets tested after the lesson itself.</p>
+    <p>Where am I and what will I try to accomplish the next few weeks?</p>
+    <p>First I want to deepen my knowledge in python. I already took the course by FreeCodeCamp and completed my first program on that page. But since I am stuck at the next project of the curriculum I think that my knowledge is not wide enough atm. </p>
+    <p>With Sololearn I dove deeper into the concept of Classes. So I used inheritance, magic methods and operators as well as class methods to build a "Shooting Game"</p>
+    <p>You might ask: "But why is this article not in the gaming section then?" Well since it is nothing visual and more like a Terminal based game its not that fitting. Also the game wasn't designed by me or anything.</p>
+    <p>The task was simple. I was given 3 classes. "Enemy", "Monster" and "Alien" with the properties name and lives. I was also given a function called hit. Each hit would take 1 life.</p>
+    <p>So I inherited the classes monster and alien from the Enemy class and used a while loop to call the hit function either on the Monster or the Alien.</p>
+    <p>My mistake was to put paranthesis after the m and a (wich were given variables for the funtions Monster() and Alien().
+       That resulted in putting out the memory location of the function called in the while loop, even though the function got called the right amount of times. By deleting the paranthesis,
+       the function would execute by calling the hit function with it's corresponding values and give me a successful test output for the problem.</p>
+  </div>
+  <script src="js/scripts.js"></script>
+</body>
+<footer>
+  <hr>
+  <h4 class="submenu"><a href="index.html">Home</a> <a href="https://github.com/Dev-Xagon">Github</a> <a>Email: devxagon@gmail.com</a> </h4>
+
+</footer>
+</html>
