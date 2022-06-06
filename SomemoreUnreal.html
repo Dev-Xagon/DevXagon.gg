@@ -1,0 +1,49 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="styles.css" rel="stylesheet" type="text/css">
+
+  <title>UnrealEngine Development</title>
+  <meta name="description" content="This will be the basic template for future Blogposts">
+  <meta name="author" content="SitePoint">
+
+  <meta property="og:title" content="Basic Template for my Blog">
+  <meta property="og:type" content="DevbLog">
+  <meta property="og:url" content="https://www.sitepoint.com/a-basic-html5-template/">
+  <meta property="og:description" content="Template for my blogposts in the future">
+  <meta property="og:image" content="image.png">
+
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+</head>
+
+<body>
+  <h1>UnrealEngine Development continues!</h1>
+
+  <div>
+    <p>So now that I finished having fun with programming Data Science with Python I decided to get back to my now rotating turret on the tank.<br>
+       But since a Tank is not that threatening without it being able to shoot, I had to give it the ability to "Spawn Actors". </p>
+       <p>So first on was the creation of a callable Blueprint Class "Projectile". I then gave it a mesh in the editor and voila!</p>
+       <img src="caughtinprojectiles.png" alt="caughttank">
+       <p>The tank now can spawn Projectiles. The problem is, that those projectiles now just float in front of it, don't move and block the way since I already gave it a collision. <br>
+      So my next task was to make it move.</p>
+      <p>Luckily Unreal Engine already has a built in projectile component. So I went on trying that out.</p>
+      <p>Now, 5 hours later I am giving up on it. I couldn't seem to fix an issue where the OnHit Event should have been triggered. Since this is needed for the next steps of registrating damage dealt and the destruction of the tank i may have to give up on the ToonTank Tutorial. Even the suggestions of the mentors and Community Members didn't get me to a solution. Kind of weird. But since it is just a tutorial, I guess I will just follow along the tutorial without being able to accomplish a satisfying result for my own and try and get another Gameproject done. Kind of feels bad though.</p>
+  </div>
+
+
+  <script src="js/scripts.js"></script>
+</body>
+<footer>
+  <hr>
+  <h4 class="submenu"><a href="index.html">Home</a> <a href="https://github.com/Dev-Xagon">Github</a> <a>Email: devxagon@gmail.com</a> </h4>
+
+</footer>
+</html>
