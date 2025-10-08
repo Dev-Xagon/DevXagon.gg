@@ -54,6 +54,10 @@ nav a {
     transform-origin: center;
 }
 
+
+/* 
+  This is a multi-line comment.
+  You can use it to explain more complex sections.
 nav a:hover {
     color: #f97316;
     text-shadow: 0 0 8px rgba(249, 115, 22, 0.5);
@@ -74,7 +78,7 @@ nav a::after {
 nav a:hover::after {
     width: 100%;
 }
-
+*/
 section {
     padding: 6rem 1rem;
     max-width: 1200px;
