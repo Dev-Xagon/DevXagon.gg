@@ -5,8 +5,20 @@
     font-family: 'Inter', sans-serif;
 }
 
+:root {
+    --bg-card: #1e293b;
+    --shadow-dark: rgba(0, 0, 0, 0.6);
+    --glow-orange: rgba(249, 115, 22, 0.3);
+    --glow-orange-hover: rgba(249, 115, 22, 0.4);
+    --border-light: rgba(255, 255, 255, 0.05);
+    --text-blue: #60a5fa;
+    --text-orange: #f97316;
+    --text-orange-dark: #ea580c;
+    --text-light: #f9fafb;
+}
+
 body {
-    background-color: #48cae4;
+    background-color: #0a0a0a;
     color: #f9fafb;
     line-height: 1.7;
     scroll-behavior: smooth;
@@ -54,10 +66,6 @@ nav a {
     transform-origin: center;
 }
 
-
-/* 
-  This is a multi-line comment.
-  You can use it to explain more complex sections.
 nav a:hover {
     color: #f97316;
     text-shadow: 0 0 8px rgba(249, 115, 22, 0.5);
@@ -87,7 +95,7 @@ section {
     transform: translateY(20px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
-*/
+
 section.visible {
     opacity: 1;
     transform: translateY(0);
@@ -127,16 +135,16 @@ section.visible {
 }
 
 .project-card {
-    background-color: #1e293b;
+    background: var(--bg-card);
     padding: 2rem;
     border-radius: 16px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), 0 0 16px rgba(249, 115, 22, 0.3);
+    border: 1px solid var(--border-light);
     text-align: center;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 24px var(--shadow-dark), 0 0 16px var(--glow-orange);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: cardFadeIn 0.6s ease-out forwards;
     opacity: 0;
     transform: scale(0.95);
-    animation: cardFadeIn 0.6s ease-out forwards;
 }
 
 .project-card:nth-child(1) { animation-delay: 0.1s; }
@@ -152,40 +160,36 @@ section.visible {
 
 .project-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7), 0 0 24px rgba(249, 115, 22, 0.4);
+    box-shadow: 0 12px 40px var(--shadow-dark), 0 0 24px var(--glow-orange-hover);
     animation: pulseGlow 1.5s infinite ease-in-out;
 }
 
 @keyframes pulseGlow {
-    0%, 100% {
-        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7), 0 0 24px rgba(249, 115, 22, 0.4);
-    }
-    50% {
-        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7), 0 0 32px rgba(249, 115, 22, 0.5);
-    }
+    0%, 100% { box-shadow: 0 12px 40px var(--shadow-dark), 0 0 24px var(--glow-orange-hover); }
+    50% { box-shadow: 0 12px 40px var(--shadow-dark), 0 0 32px var(--glow-orange-hover); }
 }
 
 .project-card h3 {
-    color: #48cae4;
-    margin-bottom: 1rem;
+    color: var(--text-blue);
     font-size: 1.5rem;
     font-weight: 600;
+    margin-bottom: 1rem;
 }
 
 .project-card a {
-    color: #f9fafb;
+    color: var(--text-light);
     text-decoration: none;
     font-weight: 600;
-    background: linear-gradient(135deg, #48cae4, #ea580c);
+    background: linear-gradient(135deg, var(--text-orange), var(--text-orange-dark));
     padding: 0.75rem 1.5rem;
     border-radius: 8px;
     display: inline-block;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card a:hover {
     transform: scale(1.05) translateY(-2px);
-    box-shadow: 0 4px 16px rgba(249, 115, 22, 0.4);
+    box-shadow: 0 4px 16px var(--glow-orange);
     animation: bounce 0.3s ease;
 }
 
@@ -196,7 +200,7 @@ section.visible {
 
 #contact {
     background-color: #111827;
-    padding: 3rem;
+    padding: iuseppe;
     border-radius: 16px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
     text-align: center;
