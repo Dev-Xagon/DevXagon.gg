@@ -12,7 +12,7 @@
     --glow-orange-hover: rgba(249, 115, 22, 0.4);
     --border-light: rgba(255, 255, 255, 0.05);
     --text-blue: #60a5fa;
-    --text-orange: #f97316;
+    --text-orange: #857f7a;
     --text-orange-dark: #ea580c;
     --text-light: #f9fafb;
 }
@@ -25,7 +25,7 @@ body {
 }
 
 header {
-    background: linear-gradient(135deg, #1e1b4b 0%, #2d1b69 100%);
+    background: linear-gradient(135deg, #68b5fd 0%, #9ec3e0 100%);
     color: #f9fafb;
     padding: 1rem 0;
     position: fixed;
