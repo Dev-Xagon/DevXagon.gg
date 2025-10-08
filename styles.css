@@ -147,7 +147,7 @@ section.visible {
     transform: scale(0.95);
 }
 h2{
-    text-align: center;
+    position: center;
 }
 
 .project-card:nth-child(1) { animation-delay: 0.1s; }
