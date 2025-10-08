@@ -162,7 +162,7 @@ section.visible {
 }
 
 .project-card h3 {
-    color: #60a5fa;
+    color: #48cae4;
     margin-bottom: 1rem;
     font-size: 1.5rem;
     font-weight: 600;
@@ -172,7 +172,7 @@ section.visible {
     color: #f9fafb;
     text-decoration: none;
     font-weight: 600;
-    background: linear-gradient(135deg, #f97316, #ea580c);
+    background: linear-gradient(135deg, #48cae4, #ea580c);
     padding: 0.75rem 1.5rem;
     border-radius: 8px;
     display: inline-block;
