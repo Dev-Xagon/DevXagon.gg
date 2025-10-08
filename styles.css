@@ -160,12 +160,13 @@ section.visible {
         transform: scale(1);
     }
 }
-
+/*
 .project-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 12px 40px var(--shadow-dark), 0 0 24px var(--glow-orange-hover);
     animation: pulseGlow 1.5s infinite ease-in-out;
 }
+*/
 
 @keyframes pulseGlow {
     0%, 100% { box-shadow: 0 12px 40px var(--shadow-dark), 0 0 24px var(--glow-orange-hover); }
