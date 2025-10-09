@@ -1,0 +1,37 @@
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width", initial-scale="1.0" />
+<title>Taschenrechner-Webpage</title>
+<link rel="stylesheet" href="styleTaschenrechner.css" />
+</head>
+
+<body>
+    <div class ="container">
+<h1> Online Taschenrechner (Lernprogress)</h1>
+
+<div class="input-row">
+<input type="number" id="ersteNummer" placeholder="Erste Nummer" /> 
+<select id="operator">
+<option value="+">+</option>
+<option value="-">-</option>
+<option value="*">*</option>
+<option value="/">/</option>
+</select>
+<input type="number" id="zweiteNummer" placeholder="Zweite Nummer" /> 
+</div>
+<button id="berechnen">Berechnen</button>
+
+
+
+<p id="Resultat">Das Resultat wird hier erscheinen</p> 
+</div> <div class="image-with-overlay">
+    <img src="koala.png" alt="Niedlicher Koala mit Ergebnisschild">
+    <p id="resultatOnImage"></p> </div>
+
+    <script src="scriptTaschenrechner.js"></script>
+</body>
+
+
+
+</html>

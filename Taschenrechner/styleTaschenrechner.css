@@ -1,0 +1,219 @@
+/*
+ * CSS-Datei für den Online-Taschenrechner
+ * Dateiname: styleTaschenrechner.css
+*/
+
+:root {
+    /* Farbpalette */
+    --primary-color: #007bff; /* Blau für Akzente und Button */
+    --secondary-color: #28a745; /* Grün für positive Rückmeldung (optional) */
+    --background-color: #f8f9fa; /* Heller Hintergrund */
+    --card-background: #ffffff; /* Weißer Hintergrund für den Taschenrechner */
+    --text-color: #343a40; /* Dunkler Text */
+    --border-color: #ced4da; /* Graue Rahmen */
+    --shadow-color: rgba(0, 0, 0, 0.1);
+
+    --image-display-width: 250px; /* Define the desired max width for the image display */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column; /* Stack calculator container and image vertically */
+    justify-content: center; /* Center content vertically in viewport */
+    align-items: center; /* Center content horizontally in viewport */
+    min-height: 100vh; /* Full viewport height */
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+.container {
+    background-color: var(--card-background);
+    padding: 80px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    width: 100%;
+    max-width: 400px; /* Max width of the calculator box */
+    text-align: center;
+    margin-bottom: 30px; /* Space between calculator box and image */
+    display: flex; /* Use flexbox to stack elements inside container */
+    flex-direction: column;
+    align-items: center; /* Center children horizontally */
+}
+
+/* --- Typografie --- */
+h1 {
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    font-size: 1.8em;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 15px;
+    width: 100%; /* Ensures border spans full width */
+}
+
+/* Normal result paragraph below calculator (if you still want it) */
+p#Resultat {
+    margin-top: 30px; /* Space above this paragraph */
+    padding: 15px;
+    border: 1px solid var(--secondary-color);
+    background-color: #e2ffeb; /* Very light green */
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: var(--secondary-color);
+    width: 100%; /* Take full width of container */
+    box-sizing: border-box;
+}
+
+/* --- Input Row (Flexbox) --- */
+.input-row {
+    display: flex; /* Enable flexbox for this row */
+    gap: 10px; /* Space between inputs and select */
+    margin-bottom: 25px;
+    width: 100%; /* Take full width of its parent (.container) */
+    justify-content: center; /* Center items within the row */
+}
+
+.input-row input[type="number"],
+.input-row select {
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    /* margin-bottom: 0; */ /* Reset any previous margin-bottom */
+}
+
+.input-row input[type="number"] {
+    flex-grow: 1; /* Allows inputs to take up available space equally */
+    width: auto; /* Let flexbox control width */
+}
+
+#operator {
+    width: auto; /* Allow select to shrink to fit content */
+    flex-shrink: 0; /* Prevents it from shrinking too much if space is tight */
+    padding-left: 8px; /* Extra padding for the select arrow */
+    padding-right: 8px;
+}
+
+input[type="number"]:focus,
+select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* --- Button-Styling --- */
+button#berechnen {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s, transform 0.1s;
+    width: 100%; /* Button takes the entire width of the container */
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 1em;
+    margin-top: 0; /* Reset previous margin-top */
+    margin-bottom: 0; /* No margin-bottom, let .container gap or next element's margin handle spacing */
+}
+
+button#berechnen:hover {
+    background-color: #0056b3; /* Darker tone on hover */
+}
+
+button#berechnen:active {
+    transform: translateY(1px); /* Click effect */
+}
+
+/* --- Image with Overlay Section --- */
+.image-with-overlay {
+    position: relative; /* This is the positioning context for the overlay text */
+    width: 100%; /* Take full width of its parent (body, then max-width below) */
+    max-width: var(--image-display-width); /* Control the overall display size of the image section */
+    margin-top: 20px; /* Space above the image section */
+    text-align: center; /* Center the image within this container if it's smaller */
+}
+
+.image-with-overlay img {
+    display: block; /* Remove extra space below image */
+    max-width: 100%; /* Image scales to fit its container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Match calculator's rounded corners */
+    box-shadow: 0 2px 8px var(--shadow-color); /* Optional: Add a subtle shadow */
+}
+
+/* Styling and Positioning for the Result Text ON THE IMAGE */
+p#resultatOnImage {
+    position: absolute; /* Positioned relative to .image-with-overlay */
+    top: 16%; /* 20% down from the top of the image */
+    left: 50%; /* 50% from the left of the image */
+    transform: translate(-50%, -50%); /* Perfectly centers the text horizontally, and centers its own height vertically at the 20% mark */
+    
+    font-size: 1.9em; /* Scaled down font size */
+    font-weight: bold;
+    color: var(--text-color); /* Dark text for contrast */
+    background-color: rgba(255, 248, 238, 0.2); /* Semi-transparent white background for readability */
+    padding: 10px 15px;
+    border-radius: 10px;
+   
+    white-space: nowrap; /* Prevents text from wrapping */
+    min-width: 60px; /* Minimum width for the background */
+    display: flex; /* Use flex to perfectly center text within its own box */
+    justify-content: center;
+    align-items: center;
+    z-index: 10; /* Ensures text is above the image */
+}
+
+/* --- Responsivität für schmale Bildschirme --- */
+@media (max-width: 500px) {
+    body {
+        padding: 10px; /* Reduce overall body padding */
+    }
+
+    .container {
+        padding: 25px 20px;
+        margin-bottom: 20px; /* Adjust spacing */
+    }
+
+    h1 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+
+    .input-row {
+        flex-direction: column; /* Stack input elements vertically */
+        gap: 15px; /* Space between stacked inputs */
+    }
+
+    .input-row input[type="number"],
+    .input-row select,
+    button#berechnen { /* Ensure button also goes full width */
+        width: 100%;
+        margin-right: 0; /* Clear previous margins */
+        margin-bottom: 0; /* Clear specific margins, use gap for spacing */
+    }
+
+    button#berechnen {
+        margin-top: 15px; /* Space between last input and button */
+        margin-bottom: 20px; /* Space below button on small screens */
+    }
+
+    p#Resultat {
+        margin-top: 20px;
+    }
+
+    .image-with-overlay {
+        max-width: 180px; /* Further reduce image size on very small screens */
+    }
+
+    p#resultatOnImage {
+        font-size: 1.2em; /* Further scale down text */
+        padding: 6px 12px;
+    }
+}
