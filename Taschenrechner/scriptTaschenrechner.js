@@ -4,7 +4,7 @@ const operatorSelectInput=document.getElementById('operator');
 const berechnenButton= document.getElementById('berechnen');
 const resultatParagraph=document.getElementById('Resultat');
 
-const resultatImage=document.getElementById("resultatImage");
+const resultatOnImage=document.getElementById("resultatOnImage");
 
 let resultat;
 
@@ -35,7 +35,7 @@ switch(operator) {
 }
 resultatParagraph.textContent ='Ergebnis: ' + resultat;
 
-resultatImage.textContent= resultat;
+resultatOnImage.textContent= resultat;
 }
 
 
